@@ -6,8 +6,6 @@ import requests
 import re
 import hashlib
 import os
-from dotenv import load_dotenv
-
 
 def main():
     if 'logged_in' not in st.session_state:
@@ -63,7 +61,7 @@ def process_uploaded_file(uploaded_file):
         with open("uploaded_file.pdf", "wb") as f:
             f.write(uploaded_file.getbuffer())
 
-        api_key = os.getenv('CHATPDF_API_KEY')
+        api_key = st.secrets["api_keys"]["CHATPDF_API_KEY"]
         url = 'https://api.chatpdf.com/v1/sources/add-file'
         headers = {'x-api-key': api_key}
 
@@ -137,9 +135,9 @@ def display_topic_content(topic, youtube_api_key, google_api_key, cse_id):
 
 
 def main_page():
-    youtube_api_key = os.getenv('YOUTUBE_API_KEY')
-    google_api_key = os.getenv('GOOGLE_API_KEY')
-    cse_id = os.getenv('CSE_ID')
+    youtube_api_key = st.secrets["api_keys"]["YOUTUBE_API_KEY"]
+    google_api_key = st.secrets["api_keys"]["GOOGLE_API_KEY"]
+    cse_id = st.secrets["api_keys"]["CSE_ID"]
 
     helpers.set_background('static/1176274.jpg')
 
