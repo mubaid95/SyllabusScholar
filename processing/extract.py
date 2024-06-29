@@ -1,4 +1,4 @@
-import fitz  # PyMuPDF
+from PyMuPDF import fitz
 import easyocr
 
 # Function to extract text from PDF
