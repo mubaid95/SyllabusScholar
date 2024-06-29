@@ -1,6 +1,7 @@
 import psycopg2
 from psycopg2 import Error
 import os
+import streamlit as st
 
 def connect():
     try:
