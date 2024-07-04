@@ -2,7 +2,7 @@
 
 ## Overview
 
-SyllabusScholar is a web application designed to manage and analyze academic syllabi.
+SyllabusScholar is a web application built on streamlit designed to manage and analyze academic syllabi.
 
 ## Prerequisites
 
@@ -24,7 +24,7 @@ SyllabusScholar is a web application designed to manage and analyze academic syl
    
  a) For DataBase: 
  
-We have created a Online Database Using Supbase- 
+We created an online database using Supbase- 
 https://supabase.com/
 
 DB_NAME= your_database_name
